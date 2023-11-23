@@ -14,7 +14,11 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: 3.x
-        
+
+      - name: Uninstall previous versions of gcloud
+        run: |
+          sudo rm -rf /usr/lib/google-cloud-sdk
+
       - name: Checkout code
         uses: actions/checkout@v2
 
