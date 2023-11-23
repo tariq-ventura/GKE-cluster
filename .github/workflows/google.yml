@@ -28,8 +28,8 @@ jobs:
           version: '333.0.0'
 
       - name: Configure Docker credentials for Google Artifact Registry
-        run: |
-          gcloud auth configure-docker gcr.io
+        run: echo "${{ secrets.SERVICE_ACCOUNT_KEY }}" | docker login -u _json_key --password-stdin https://gcr.io
+
 
       - name: Build and push Docker image
         run: |
