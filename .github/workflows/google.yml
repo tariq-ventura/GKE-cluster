@@ -16,8 +16,8 @@ jobs:
         tar -xzf google-cloud-sdk-367.0.0-linux-x86_64.tar.gz
         ./google-cloud-sdk/install.sh --quiet --path-update true
         source $HOME/google-cloud-sdk/path.bash.inc
-        source $HOME/google-cloud-sdk/completion.bash.inc
         gcloud --version
+
 
         
     - name: Checkout
