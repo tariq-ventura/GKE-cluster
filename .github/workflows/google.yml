@@ -1,4 +1,4 @@
-name: Deploy to Artifact Registry
+name: Deploy to Artifact Registry & Container Registry
 
 on:
   push:
