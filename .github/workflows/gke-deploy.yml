@@ -76,7 +76,7 @@ jobs:
         docker push us-east1-docker.pkg.dev/$PROJECT_ID/images/$IMAGE_NAME:latest
 
     - name: Uninstall previous versions of gcloud
-      run: |
+      run: | 
         sudo rm -rf /usr/lib/google-cloud-sdk
 
     # Get the GKE credentials so we can deploy to the cluster
