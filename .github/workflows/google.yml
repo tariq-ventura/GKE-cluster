@@ -44,6 +44,7 @@ jobs:
       run: |-
         docker tag $IMAGE_NAME:latest gcr.io/$PROJECT_ID/$IMAGE_NAME:latest
         docker push gcr.io/$PROJECT_ID/$IMAGE_NAME:latest 
+      continue-on-error: true
 
     - name: Push Docker Image to Artifact Registry
       run: |-
