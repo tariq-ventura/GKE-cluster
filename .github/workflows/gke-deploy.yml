@@ -92,4 +92,5 @@ jobs:
       run: |
         gcloud container clusters get-credentials $GKE_CLUSTER --region $GKE_ZONE
         sed -i "s/GOOGLE_PROJECT/$PROJECT_ID/g" resources.yaml
+        kubectl delete deploy vue-app
         kubectl apply -f resources.yaml

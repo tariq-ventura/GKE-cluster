@@ -17,15 +17,3 @@ spec:
         image: us-east1-docker.pkg.dev/molten-unison-401314/images/vue-gke:latest
         ports:
         - containerPort: 80
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: vue-app
-spec:
-  type: LoadBalancer
-  ports:
-    - port: 80
-      targetPort: 8080
-  selector:
-    app: vue-app

@@ -9,7 +9,7 @@ export default {
     name: 'myComponent',
     data () {
         return {
-            message: 'Hello world with vue'
+            message: 'Text deploy from pipeline'
         }
     }
 }
