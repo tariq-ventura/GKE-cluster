@@ -90,6 +90,6 @@ jobs:
 
     - name: Deploy to GKE
       run: |
-        gcloud container clusters get-credentials $GKE_CLUSTER --region $GAR_LOCATION
+        gcloud container clusters get-credentials $GKE_CLUSTER --region $GKE_ZONE
         sed -i "s/GOOGLE_PROJECT/$PROJECT_ID/g" resources.yaml
         kubectl apply -f resources.yaml
